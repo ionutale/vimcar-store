@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
-import css from './Toolbar.module.css'
+import css from './Toolbar.css'
+import logo from '../../assets/logo&icons/vimcar-logo.svg'
+import Cart from '../Cart/Cart';
 
 class Toolbar extends Component {
     render() {
         return (
-            <div className={css.Toolbar}>Toolbar</div>
+            <nav className={css.Toolbar}>
+                <img className={css.Logo} src={logo} alt="vimcar"/>
+                <Cart />
+            </nav>
         )
     }
 }
