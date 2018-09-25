@@ -19,9 +19,11 @@ class App extends Component {
   }
 
   generateCards = itemsArr => {
-    let cards = itemsArr.map( (item, key) => <ImageCard  
-    imageSource={`./productImages/${item.images.normal}`}
-    description={item.description}
+    let cards = itemsArr.map( (item, key) => 
+    <ImageCard
+      key={key}  
+      imageSource={`./productImages/${item.images.normal}`}
+      description={item.description}
     />)
     return cards.length > 0 ? cards : "something when wrong, please try again"
   }
