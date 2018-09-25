@@ -8,7 +8,13 @@ class App extends Component {
     return (
       <div className={css.App}>
         <Toolbar />
+        <section className={css.ItemsComponent} >
         <ImageCard />
+        <ImageCard />
+        <ImageCard />
+        <ImageCard />
+        <ImageCard />
+        </section>
       </div>
     );
   }
