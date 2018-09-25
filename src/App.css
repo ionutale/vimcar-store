@@ -4,9 +4,8 @@
 
 .ItemsComponent {
   margin: 5% auto;
-  width: 80%;
+  width: 75%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   /* background-color: antiquewhite; */
 }
