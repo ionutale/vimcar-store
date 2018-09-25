@@ -5,12 +5,13 @@ import imagePlaceHolder from '../../assets/logo&icons/placeholder.png'
 const ImageCard = ({
     imageSource = imagePlaceHolder, 
     alt = 'placeholder',
-    description = 'some article description and some more description here :D'
+    description = 'some article description and some more description here :D',
+    onClick
 }) => {
    return (
         <div className={css.ImageCard}>
             <div className={css.Container} >
-                <div className={css.Overlay} >
+                <div className={css.Overlay} onClick={onClick}>
                     <h1 className={css.OverlayText}>Add to Cart</h1>
                 </div>
                 <img src={imageSource} alt={alt}/>
