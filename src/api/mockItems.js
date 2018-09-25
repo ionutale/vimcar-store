@@ -1,4 +1,4 @@
-export const images = [
+export const items = [
     {
         name: 'Double Tour, 38mm Stainless Steel case with Bleu Jean Leather Band',
         qty: 1,
