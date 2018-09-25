@@ -9,10 +9,15 @@ const ImageCard = ({
 }) => {
    return (
         <div className={css.ImageCard}>
-            <img src={imageSource} alt={alt}/>
-            <article className={css.Description}>
+            <div className={css.Container} >
+                <div className={css.Overlay} >
+                    <h1 className={css.OverlayText}>Add to Cart</h1>
+                </div>
+                <img src={imageSource} alt={alt}/>
+            </div>
+            <p className={css.Description}>
                 {description}
-            </article>
+            </p>
         </div>
     )   
 }

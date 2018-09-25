@@ -1,18 +1,57 @@
 .ImageCard {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
     margin-left: 5px;
     width: 220px;
+    height: auto;
 }
 
 .ImageCard img {
-    width: 200px;
-    height: 200px;
-    background-color: white;
-    box-shadow: 1px 1px 30px 10px rgba(0, 0, 0, 0.04);
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
 }
 
-.Description {
-    padding: 0 30px;
-    overflow-wrap: break-word;
-    font-size: 0.8em;
+.Container {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    box-shadow: 1px 1px 30px 10px rgba(0, 0, 0, 0.04);  
+
+}
+
+.Overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.Overlay:hover {
+    opacity: 1;
+}
+
+.OverlayText {
+    color: black;
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* padding: 10px 20px; */
+}
+
+.ImageCard p {
+    width: 80%;
+    text-align: center;
+    font-size: 0.85rem;
+    margin: 15px auto;
+    padding-bottom: 5px;
 }
