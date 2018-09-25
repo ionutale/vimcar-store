@@ -1,9 +1,13 @@
 import React from 'react'
-import css from './Cart.module.css'
+import css from './Cart.css'
+import cartSVG from '../../assets/logo&icons/cart.svg'
 
-const Cart = (props) => {
+const Cart = ({itemsInCart = 0}) => {
    return (
-        <div className={css.Cart}>Cart</div>
+        <div className={css.Cart}>
+            <div className={css.Badge} >{itemsInCart}</div>
+            <img className={css.CartImg} src={cartSVG} alt="See cart" />
+        </div>
     )   
 }
 

@@ -1,0 +1,22 @@
+.Cart {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.Badge {
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    height: 15px;
+    width: 20px;
+    top: 0px;
+    right: 0px;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.CartImg  {
+    bottom: 0px;
+}
