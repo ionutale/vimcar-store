@@ -7,7 +7,8 @@ import * as items_service from './network/items-service';
 class App extends Component {
 
   state = {
-    items: []
+    items: [],
+    itemsInCart: 0
   }
   async componentDidMount () {
     try {
@@ -18,20 +19,31 @@ class App extends Component {
     }
   }
 
+  addItemOnCart = () => {
+    this.setState( ( prevState ) => {
+      return { itemsInCart: prevState.itemsInCart+1 };
+    });
+    console.log('fasedfas');
+    
+  }
+
   generateCards = itemsArr => {
     let cards = itemsArr.map( (item, key) => 
     <ImageCard
       key={key}  
       imageSource={`./productImages/${item.images.normal}`}
       description={item.description}
+      onClick={() => this.addItemOnCart()}
     />)
     return cards.length > 0 ? cards : "something when wrong, please try again"
   }
 
   render() {
+    console.log(this.state.itemsInCart);
+    
     return (
       <div className={css.App}>
-        <Toolbar />
+        <Toolbar itemsInCart={this.state.itemsInCart}/>
         <section className={css.ItemsComponent} >
           {this.generateCards(this.state.items)}
         </section>
