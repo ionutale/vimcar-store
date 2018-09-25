@@ -1,0 +1,17 @@
+.ImageCard {
+    margin-top: 20px;
+    width: 220px;
+}
+
+.ImageCard img {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 1px 1px 30px 10px rgba(0, 0, 0, 0.04);
+}
+
+.Description {
+    padding: 0 30px;
+    overflow-wrap: break-word;
+    font-size: 0.8em;
+}
