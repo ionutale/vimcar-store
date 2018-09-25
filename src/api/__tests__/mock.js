@@ -1,4 +1,4 @@
-const fetch = require('../mock')
+import fetch from '../mock'
 
 const mockRandom = (n) => {
   const realRandom = Math.random
