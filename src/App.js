@@ -10,6 +10,7 @@ class App extends Component {
     items: [],
     itemsInCart: 0
   }
+  
   async componentDidMount () {
     try {
       const res = await items_service.fetchDataFromServer()
@@ -22,9 +23,7 @@ class App extends Component {
   addItemOnCart = () => {
     this.setState( ( prevState ) => {
       return { itemsInCart: prevState.itemsInCart+1 };
-    });
-    console.log('fasedfas');
-    
+    });    
   }
 
   purchaseItems = () => {  
@@ -50,9 +49,7 @@ class App extends Component {
     return cards.length > 0 ? cards : "something when wrong, please try again"
   }
 
-  render() {
-    console.log(this.state.itemsInCart);
-    
+  render() {    
     return (
       <div className={css.App}>
         <Toolbar itemsInCart={this.state.itemsInCart} onClick={() => this.purchaseItems()}/>

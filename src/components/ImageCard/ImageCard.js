@@ -7,7 +7,8 @@ const ImageCard = ({
             alt = 'placeholder',
             description = 'some article description and some more description here :D',
             onClick
-        }) =>  (
+        }) => 
+    (
         <div className={css.ImageCard}>
             <div className={css.Container} >
                 <div className={css.Overlay} onClick={onClick}>
