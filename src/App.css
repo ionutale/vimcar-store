@@ -7,5 +7,5 @@
   width: 75%;
   display: flex;
   flex-wrap: wrap;
-  /* background-color: antiquewhite; */
+  justify-content: center;
 }

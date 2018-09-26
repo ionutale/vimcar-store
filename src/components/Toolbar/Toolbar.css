@@ -11,4 +11,6 @@
 
 .Logo {
     margin: auto;
+    /* adding a bit of padding to center the logo */
+    padding-left: 40px; 
 }
