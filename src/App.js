@@ -27,6 +27,18 @@ class App extends Component {
     
   }
 
+  purchaseItems = () => {  
+    items_service.purchaseAllItemsInCart(this.state.itemsInCart)
+    .then ( () => {
+      alert(`CONGRADULATION!!! \nYou just purchased ${this.state.itemsInCart} apple watches.\nYou will never be late again!!!`)
+      this.setState({itemsInCart: 0})
+    })
+    .catch(error => {
+      alert(`We are very sorry,\nyour order could not be completed because of ${error.mesage}`)
+    })
+  }
+
+
   generateCards = itemsArr => {
     let cards = itemsArr.map( (item, key) => 
     <ImageCard
@@ -43,7 +55,7 @@ class App extends Component {
     
     return (
       <div className={css.App}>
-        <Toolbar itemsInCart={this.state.itemsInCart}/>
+        <Toolbar itemsInCart={this.state.itemsInCart} onClick={() => this.purchaseItems()}/>
         <section className={css.ItemsComponent} >
           {this.generateCards(this.state.items)}
         </section>
