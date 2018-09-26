@@ -6,7 +6,7 @@ import Cart from '../Cart/Cart';
 const Toolbar = ({itemsInCart, onClick}) => 
     (
         <nav className={css.Toolbar}>
-            <img className={css.Logo} src={logo} alt="vimcar"/>
+            <img className={css.Logo} src={logo} alt="vimcar logo"/>
             <Cart itemsInCart={itemsInCart} onClick={onClick}/>
         </nav>
     ) 
