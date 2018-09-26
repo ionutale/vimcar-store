@@ -28,13 +28,29 @@ class App extends Component {
 
   purchaseItems = () => {  
     items_service.purchaseAllItemsInCart(this.state.itemsInCart)
-    .then ( () => {
-      alert(`CONGRADULATION!!! \nYou just purchased ${this.state.itemsInCart} apple watches.\nYou will never be late again!!!`)
-      this.setState({itemsInCart: 0})
+    .then ( res => {
+      console.log(res.status);
+      
+      this.purchaseResponseHandler(res)
     })
     .catch(error => {
+      // the catch looks like it will never happen because the promise nevej rejects
+      // but i leave it here code stability and future updates ( that will never happen because is a test)
       alert(`We are very sorry,\nyour order could not be completed because of ${error.mesage}`)
     })
+  }
+
+  purchaseResponseHandler = res => {
+    if (res.status === 204) {
+      alert(`CONGRADULATION!!! \nYou just purchased ${this.state.itemsInCart} apple watches.\nYou will never be late again!!!`)
+      this.setState({itemsInCart: 0})
+    } else if(res.status === 418) {
+      alert(`418 I'm a teapot :D`)
+    } else if(res.status === 500) {
+      alert(`An internal sever error ocured, please try again.\nIf the error persists, please contact us!`)
+    } else {
+      alert(`I have no idea what happen.\nHere is what the server explanation is: ${res.json()}`)
+    }
   }
 
 
