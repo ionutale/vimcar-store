@@ -20,3 +20,7 @@
 .CartImg  {
     bottom: 0px;
 }
+
+.Cart:hover  {
+    cursor: pointer;
+}
