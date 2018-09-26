@@ -37,20 +37,20 @@ The API specification can be found [here](https://github.com/vimcar/frontend-cha
 
 - used the CRA because i like it as a boilerplate
 - ejected the app to use css modules
-- the items in the store are created dynamicaly based on the api response
-- for the items list in the store i used the diasplay: flex and center all the items
-    on desktop looks a bit weird, but this way on smaller screen desn't give the feeling items are not aligned properly
+- the items in the store are created dynamically based on the api response
+- for the items list in the store i used the display: flex and center all the items
+    on desktop looks a bit weird, but this way on smaller screen doesn't give the feeling items are not aligned properly
 
 - the graphic is not identical but close enough. to improve the graphic at this point 
         i usually talk with the: client, designer, project manager ..etc
 - added test for all the components
 - some of the components are stateless, because they need no state ( even if use redux )
 - product images placed in the public directory to simulate a CDN or server public directory
-- the mock had no get method, added one with just 2 cases: 1 wehen everything is great, 1 when something whent wrong
+- the mock had no get method, added one with just 2 cases: 1 when everything is great, 1 when something went wrong
 - created a mockItems array to mock a api json response
 - for the purchase i used alert as a feed back to the user.
     in normal cases i would talk to client, designer, project manager ..etc and maybe use a notification modal
-- added a toolbar, was not in the design but i think with a toolbar the code and the page is much more organized
+- added a toolbar, was not in the design but i think with a toolbar the code and the page is much more organised
 
 
 ## missing parts
@@ -63,9 +63,9 @@ The API specification can be found [here](https://github.com/vimcar/frontend-cha
     case1: on mobile no overlay
     case2: on mobile first tap show the overlay, 2 tap will add item to the cart
     case3: on mobile just show the "add to cart" under the image so the user can press it and add to cart the item
+- didn't added other response cases that the server could return. 
 
 
 
-## harderst part
+## hardest part
 - understanding the mock api. the  *Implementation details* are a bit confusing.
-
