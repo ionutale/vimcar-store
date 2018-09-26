@@ -3,12 +3,11 @@ import css from './ImageCard.css'
 import imagePlaceHolder from '../../assets/logo&icons/placeholder.png'
 
 const ImageCard = ({
-    imageSource = imagePlaceHolder, 
-    alt = 'placeholder',
-    description = 'some article description and some more description here :D',
-    onClick
-}) => {
-   return (
+            imageSource = imagePlaceHolder, 
+            alt = 'placeholder',
+            description = 'some article description and some more description here :D',
+            onClick
+        }) =>  (
         <div className={css.ImageCard}>
             <div className={css.Container} >
                 <div className={css.Overlay} onClick={onClick}>
@@ -20,8 +19,7 @@ const ImageCard = ({
                 {description}
             </p>
         </div>
-    )   
-}
+    )
 
 export default ImageCard
 

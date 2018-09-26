@@ -18,8 +18,8 @@
     position: relative;
     height: 200px;
     width: 200px;
-    box-shadow: 1px 1px 30px 10px rgba(0, 0, 0, 0.04);  
-
+    box-shadow: 1px 1px 30px 10px rgba(0, 0, 0, 0.06);
+    background: url('../../assets/logo&icons/placeholder.png') no-repeat center;
 }
 
 .Overlay {

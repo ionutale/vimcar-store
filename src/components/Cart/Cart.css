@@ -17,10 +17,10 @@
     font-weight: bold;
 }
 
-.CartImg  {
+.CartImg {
     bottom: 0px;
 }
 
-.Cart:hover  {
+.Cart:hover {
     cursor: pointer;
 }
